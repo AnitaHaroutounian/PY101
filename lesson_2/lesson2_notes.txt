@@ -1,0 +1,8 @@
+Style Guide Notes:
+    - Use snake_case formatting for variable and function names. (Ex: my_variable = 'Hello World!')
+    - Use PascalCase formatting for class names. (Ex: class DomesticCat)
+    - Use SCREAMING_SNAKE_CASE with underscores to represent constants: values that don't change. (Ex: FOUR = 'four' or INTEREST_RATE = 0.0525)
+    - All names (variables, constants and functions) should use alphabetic and numeric characters only.
+    - Use spaces between operators and operands to make the code easier to read.
+
+*Note: Refer to PEP 8 in the official Python style guide for more comprehensive guidelines.
