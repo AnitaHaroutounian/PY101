@@ -6,3 +6,76 @@ Style Guide Notes:
     - Use spaces between operators and operands to make the code easier to read.
 
 *Note: Refer to PEP 8 in the official Python style guide for more comprehensive guidelines.
+
+
+Truthiness:
+    - True and false statements help build conditional logic.
+    - A boolean data type has the purpose of conveying whether a value is true of false.
+    - In real code, True and False aren't typically used directly, they are the result of the evaluation of an expression.
+    - Logical operators evaluate en expression with two subexpressions in order to return a value that is either True or False.
+    - The 'and' operator evaluates as True ONLY when both expressions are truthy. Operators like < and > are handled with higher precedence than logical operators like and.
+        *No matter how many sub-expressions we chain, it is evaluated left to right. If the first expression is false with the operator 'and', the whole epxression is false.
+    - The 'or' operator evaluates as True when either of the two sub-expressions evaluates as True, or False when both evaluate as False.
+    - The 'not' operator inverts the truth value of the condition, if it's True, not makes it False. It's useful to check the opposite of some condition.
+    - Both 'and' and 'or' operators are short-circuit. If it can determine its final value, it will stop evaluating it.
+    - Here are all the values that automatically evaluate as false:
+        False
+        None
+        0
+        0.0
+        0j
+        "" (an empty string)
+        [] (an empty list)
+        {} (an empty dictionary)
+        () (an empty tuple)
+        set() (an empty set)
+        frozenset() (an empty frozenset)
+        range(0) (an empty range)
+
+
+Pseudocode:
+    - There are two layers to solving any problem:
+        1. The logical problem domain layer
+        2. The syntactical programming language layer
+    - When a programmer isn't fluent in the language, pseudocode comes into play.
+    - Using pseudocode lets us focus on the logical problem domain layer without dragging down the programming language layer.
+    - Here is a list of keywords to assist breaking down the program logic:
+        Start: Start of the program
+        Set: Set a variable that we can use for later
+        Get: Retrieve input from the user 
+        Print: Display output to the user
+        Read: Retrieve a value from a variable
+        If/Else if/Else: Show conditional branches in logic
+        While: Show looping logic
+        End: End of the program
+    - We then translate it into program code to test the logic.
+
+
+Flowcharts:
+    - Using a flowchart helps visually map out the logical sequence of a solution.
+    - The components of a flowchart are:
+        Start/stop
+        Processing Step
+        Input/output
+        Decision
+        Connector
+
+Pylint:
+    - Pylint is a static code analyzer, to install it (recommended for each virtual environment created) enter: pip install pylint
+
+Debugging:
+    - Here are some steps to follow for beginners in debugging:
+        Reproduce the error
+        Determine the boundaries of the error
+        Trace the code
+        Understand the problem
+        Implement a fix
+
+Errors:
+    - NameError: Using a variable or function that is not defined
+    - TypeError: Value of wrong type is used in an expression
+    - SyntaxError: Code does not follow syntactic rules
+    - ValueError: A function receives an argument of the correct data type, but the value of the argument is inappropriate for the operation
+    - IndexError: Trying to acccess an index of a sequence (list or string) that is outside the range of valid indexes
+    - KeyError: Trying to access a dictionary key that doesn't exist
+    - ZeroDivisionError: Attempting to divide by zero or use 0 on the right side of modulo
