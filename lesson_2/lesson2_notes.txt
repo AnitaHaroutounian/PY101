@@ -78,4 +78,38 @@ Errors:
     - ValueError: A function receives an argument of the correct data type, but the value of the argument is inappropriate for the operation
     - IndexError: Trying to acccess an index of a sequence (list or string) that is outside the range of valid indexes
     - KeyError: Trying to access a dictionary key that doesn't exist
-    - ZeroDivisionError: Attempting to divide by zero or use 0 on the right side of modulo
+    - ZeroDivisionError: Attempting to divide by zero or use 0 on the right side of modulo.
+
+Precedence:
+    - In an expression, operators that have a higher precedence are prioritized. For example, * over +.
+    - If we want to override precedence, we can do use parentheses.
+    - This shows us the importance of using parentheses when mixing operators and not to rely on precedence rules.
+
+Type Conversions:
+    - Type coercion means converting a value of one type to another:
+        Values to integers: only works with numeric values and even boolean values (True = 1, False = 0)
+        Values to floats: same concept as int(), note that floats have a special nan value (representing the missing value in the data)
+        Values to strings: versatile function that work with all buit-in Python data types
+        Values to booleans: works with all built-in Python values and most non-built-in-values. Returns True (if truthy) and False (if falsy)
+        repr() vs str(): str() creates a string representation meant to be human-readable, repr() creates a string representation used to recreate the object (for debugging)
+        Combining integers and floats: You can combine them, python autromatically converts the integer to a float (3 turns into 3.0)
+        Combining strings and non-strings: You can not combine non-strings to strings (especially with operations), python will raise an error (except for print)
+
+Variable Scope:
+    - A variable's scope is the part of the program that can access that variable by name.
+    - Global scope: Variables intialized outside of any function have a global scope (accessible from anywhere in the program)
+    - Variable scope: Variable is limited to a specific function or code block when they are intialized.
+        Rule 1: Variables defined in a function are local to that function
+        Rule 2: Variables defined within a function are local unless markes as global
+        Rule 3: Variables used but not reassigned in a function may be in the outer scope
+        Rule 4: Peer scopes do not conflict
+        Rule 5: Nested fucntions have their own scope
+
+Pass by Reference vs Pass by Value:
+    - Passing by value means the function only has a copy of the original object. Operations performed within a function have
+      no effect on the original object outside of the function.
+    - Passing by reference means operations within the function affected the original object
+    - Whether or not an original object is modified depends on whether or not they're mutable
+
+
+
